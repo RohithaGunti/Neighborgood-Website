@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3697</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+    body{
+margin-top:20px;
+color: #1a202c;
+text-align: left;
+background-color: #e2e8f0;    
+}
+.main-body {
+padding: 15px;
+}
+.card {
+box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+position: relative;
+display: flex;
+flex-direction: column;
+min-width: 0;
+word-wrap: break-word;
+background-color: #fff;
+background-clip: border-box;
+border: 0 solid rgba(0,0,0,.125);
+border-radius: .25rem;
+}
+
+.card-body {
+flex: 1 1 auto;
+min-height: 1px;
+padding: 1rem;
+}
+
+.gutters-sm {
+margin-right: -8px;
+margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+padding-right: 8px;
+padding-left: 8px;
+}
+.mb-3, .my-3 {
+margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+background-color: #e2e8f0;
+}
+.h-100 {
+height: 100%!important;
+}
+.shadow-none {
+box-shadow: none!important;
+}
+
+</style>
+<style>
+body {
+  background-image: url('back.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Montserrat";
+}
+h1 {font-family: sans-serif}
+.center {
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+</head>
+<body>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="forum.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Forum</a>
+    <a href="ai.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Find a Comrade</a>
+    <a href="people.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Find Neighbors</a>
+    <a href="profile.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">My Profile</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Logout</a>
+  </div>
+</nav>
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+<!-- Header -->
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+
+    <section class="hero-wrap js-fullheight">
+        <div class="container px-0">
+        <div class="col-md-12 ftco-animate">
+        <div class="desc">
+        <div class="main-body">
+        <div class="card">
+        <div class="card-body">
+        <div class="d-flex flex-column align-items-center text-center">
+        <img src="a8.png" alt="Admin" class="rounded-circle" width="150">
+        <div class="mt-3">
+        <h4>Stacey Bright</h4>
+        <p class="text-muted font-size-sm">Doctor</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-12">
+        <div class="card mb-3">
+        <div class="card-body">
+        <div class="row">
+        <div class="col-sm-3">
+        <h6 class="mb-0">Name</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+        Stacey Bright
+        </div>
+        </div>
+        <hr>
+        <div class="row">
+        <div class="col-sm-3">
+        <h6 class="mb-0">Address</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+        3697 Queens Lane
+        </div>
+        </div>
+        <hr>
+        <div class="row">
+        <div class="col-sm-3">
+        <h6 class="mb-0">Email</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+        <a href="">xxx</a>
+        </div>
+        </div>
+        <hr>
+        <div class="row">
+        <div class="col-sm-3">
+        <h6 class="mb-0">Phone</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+        xxx
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="row gutters-sm">
+        <div class="col-sm-12 mb-4">
+        <div class="card h-100">
+        <div class="card-body">
+        <h6 class="d-flex align-items-center mb-3">My Preferences</h6>
+        <div class="row">
+        <div class="col-sm-3">Walking</div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions1" disabled>
+        <label class="form-check-label" for="inlineRadio1">Slow</label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions1" disabled>
+        <label class="form-check-label" for="inlineRadio2">Moderate</label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions1" checked disabled>
+        <label class="form-check-label" for="inlineRadio3">Fast</label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions1" disabled>
+        <label class="form-check-label" for="inlineRadio3">Not Interested</label>
+        </div>
+        </div>
+        
+        <hr>
+        
+        <div class="row">
+        <div class="col-sm-3">Running</div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1" disabled>
+        <label class="form-check-label" for="inlineRadio1">Slow</label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" disabled>
+        <label class="form-check-label" for="inlineRadio2">Moderate</label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option3" disabled>
+        <label class="form-check-label" for="inlineRadio3">Fast</label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option3" checked disabled>
+        <label class="form-check-label" for="inlineRadio3">Not Interested</label>
+        </div>
+        </div>
+        
+        <hr>
+        
+        <div class="row">
+        <div class="col-sm-3">Swimming</div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" disabled>
+        <label class="form-check-label" for="inlineRadio1">Backyard</label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" disabled>
+        <label class="form-check-label" for="inlineRadio2">Public Pool</label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" checked disabled>
+        <label class="form-check-label" for="inlineRadio3">Not Interested</label>
+        </div>
+        </div>
+        
+        <hr>
+        
+        <div class="row">
+        <div class="col-sm-6">
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckDefault">
+        Bicycling
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Dog Walking
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" checked disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Gardening
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Tea Time
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Reading Group
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" checked disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Drawing/Sketching/Painting
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Dinner Parties
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Yoga
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" checked disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Baby Sitting
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" checked disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Happy Hour
+        </label>
+        </div>
+        
+        </div>
+        <div class="col-sm-6">
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        E-Gaming
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Watching TV Sports
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" checked disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Movies
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" checked disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Shopping
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Tutoring
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Errands
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Rides
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" checked disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Elder Care
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Pet Care
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" disabled>
+        <label class="form-check-label" for="flexCheckChecked">
+        Repair Advice
+        </label>
+        </div>
+        </div>
+        </div>
+        
+        <hr>
+
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+
+</header>
+</div>
+<!-- End Page Content -->
+</div>
+
+<script>
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

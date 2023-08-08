@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>Chat with AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+    .msger-inputarea {
+  display: flex;
+  padding: 10px;
+  border-top: var(--border);
+  background: #eee;
+}
+.msger-inputarea * {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+}
+.msger-input {
+  flex: 1;
+  background: #ddd;
+}
+.msger-send-btn {
+  margin-left: 10px;
+  background: rgb(0, 196, 65);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.23s;
+}
+.msger-send-btn:hover {
+  background: rgb(0, 180, 50);
+}
+    	body{
+    background:#eee;    
+}
+.chat-list {
+    padding: 0;
+    font-size: .8rem;
+}
+
+.chat-list li {
+    margin-bottom: 10px;
+    overflow: auto;
+    color: #ffffff;
+}
+
+.chat-list .chat-img {
+    float: left;
+    width: 48px;
+}
+
+.chat-list .chat-img img {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 100%;
+}
+
+.chat-list .chat-message {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: #5a99ee;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.chat-list .chat-message:before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    width: 0;
+    height: 0;
+}
+
+.chat-list .chat-message h5 {
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    line-height: 100%;
+    font-size: .9rem;
+}
+
+.chat-list .chat-message p {
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-list .chat-body {
+    margin-left: 20px;
+    float: left;
+    width: 70%;
+}
+
+.chat-list .in .chat-message:before {
+    left: -12px;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #5a99ee;
+}
+
+.chat-list .out .chat-img {
+    float: right;
+}
+
+.chat-list .out .chat-body {
+    float: right;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.chat-list .out .chat-message {
+    background: #fc6d4c;
+}
+
+.chat-list .out .chat-message:before {
+    right: -12px;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #fc6d4c;
+}
+
+.card .card-header:first-child {
+    -webkit-border-radius: 0.3rem 0.3rem 0 0;
+    -moz-border-radius: 0.3rem 0.3rem 0 0;
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+.card .card-header {
+    background: #17202b;
+    border: 0;
+    font-size: 1rem;
+    padding: .65rem 1rem;
+    position: relative;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.content{
+    margin-top:40px;    
+}
+body {
+    background-image: url('back.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Montserrat";
+}
+    </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+      <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+      <a href="forum.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Forum</a>
+      <a href="ai.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Find a Comrade</a>
+      <a href="people.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Find Neighbors</a>
+      <a href="profile.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">My Profile</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Logout</a>
+    </div>
+  </nav>
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-content" style="max-width:1500px">
+  <!-- Header -->
+  <span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+  <div class="w3-clear"></div>
+  <header class="w3-center w3-margin-bottom">
+</header>
+</div>
+<!-- End Page Content -->
+</div>
+
+<script>
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+<div class="container content">
+<div class="row">
+<div class="col-xl-6 col-lg-12 col-md-6 col-sm-12 col-12">
+<div class="card">
+<div class="card-header">Chat</div>
+<div class="card-body height3">
+<ul class="chat-list">
+<li class="in">
+<div class="chat-img">
+<img alt="Avtar" src="sys.jpg">
+</div>
+<div class="chat-body">
+<div class="chat-message">
+<h5>AI</h5>
+<p>How can I help you John?</p>
+</div>
+</div>
+</li>
+<li class="out">
+<div class="chat-img">
+<img alt="Avtar" src="propic.png">
+</div>
+<div class="chat-body">
+<div class="chat-message">
+<h5>John</h5>
+<p>Who can come for evening walk with me?</p>
+</div>
+</div>
+</li>
+<li class="in">
+<div class="chat-img">
+<img alt="Avtar" src="sys.jpg">
+</div>
+<div class="chat-body">
+<div class="chat-message">
+<h5 class="name">AI</h5>
+<p>Riyadh Khan from 3696 is most likely to come for walk.</p>
+</div>
+</div>
+</li>
+<li class="out">
+<div class="chat-img">
+<img alt="Avtar" src="propic.png">
+</div>
+<div class="chat-body">
+<div class="chat-message">
+<h5>John</h5>
+<p>Ok!</p>
+</div>
+</div>
+</li>
+<li class="in">
+<div class="chat-img">
+<img alt="Avtar" src="sys.jpg">
+</div>
+<div class="chat-body">
+<div class="chat-message">
+<h5 class="name">AI</h5>
+<p>Happy to Help.</p>
+</div>
+</div>
+</li>
+</ul>
+<form class="msger-inputarea">
+    <input type="text" class="msger-input" placeholder="Enter your message...">
+    <button type="submit" class="msger-send-btn">Send</button>
+</form>
+</div>
+</div>
+<br><br><br>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>
